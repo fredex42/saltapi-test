@@ -10,7 +10,8 @@ Usage instructions:
 salt-master is started up in the background and salt-api in the foreground, you should
 see the salt-api log being displayed in your terminal
 3. You should now be able to access the salt api via port 8000 on your local machine:
-  ```$ curl http://localhost:8000 -D-
+  ```
+  $ curl http://localhost:8000 -D-
   HTTP/1.1 200 OK
   Content-Length: 146
   Access-Control-Expose-Headers: GET, POST
