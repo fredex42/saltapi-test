@@ -29,11 +29,11 @@ see the salt-api log being displayed in your terminal
 4. The container creates a user called `salttest` with the password `test` for default authentication, with full permissions.
 This is simple to customise in the Dockerfile.
 5. To shut the container down, use `docker container stop`:
-  ```
+```
   $ docker container ls
       CONTAINER ID        IMAGE                       COMMAND                  CREATED              STATUS              PORTS                  NAMES
     99b6d10d2ab2        andyg/saltapi-test:latest   "/bin/bash -c '/usr/…"   About a minute ago   Up About a minute   0.0.0.0:8000->80/tcp   dazzling_fermi
   $ docker container stop dazzling_fermi
   $ docker container rm dazzling_fermi
-    ```
+ ```
   (the last command is not necessary if you started the container with `--rm` on the `docker run` commandline)
