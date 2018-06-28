@@ -1,0 +1,11 @@
+rest_cherrypy:
+  port: 80
+  disable_ssl: true
+
+external_auth:
+  pam:
+    salttest:
+      - .*
+      - '@runner'
+      - '@wheel'
+      - '@jobs'
