@@ -26,7 +26,8 @@ see the salt-api log being displayed in your terminal
   {"clients": ["local", "local_async", "local_batch", "local_subset", "runner", "runner_async", "ssh", "wheel", "wheel_async"], "return": "Welcome"}
   $
   ```
-4. The container creates a user called `salttest` with the password `test` for default authentication, with full permissions.
+4. The container creates a user called `salttest` with the password `test` for default authentication, with permissions currently limited to creating accepted minion keys only.  Update the file `master` and rebuild the container for more options; see https://docs.saltstack.com/en/latest/topics/eauth/index.html#acl-eauth and https://github.com/saltstack/salt/issues/19732 for more information on the external auth syntax.
+
 This is simple to customise in the Dockerfile.
 5. To shut the container down, use `docker container stop`:
 ```
