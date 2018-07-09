@@ -5,7 +5,10 @@ rest_cherrypy:
 external_auth:
   pam:
     salttest:
-      - .*
-      - '@runner'
-      - '@wheel'
-      - '@jobs'
+      #- .*
+      #- '@runner'
+      #limit the test user to _only_ be able to generate keys and nothing malicious.
+      #see https://github.com/saltstack/salt/issues/19732 for the exact syntax
+      - '@wheel':
+        - 'key.gen_accept'
+      #- '@jobs'
